@@ -13,6 +13,40 @@
   padding: 0 80px;
   margin: auto;
 }
+/* templete codes */
+section {
+  padding: 100px 0;
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 280px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  background: #fff;
+  transform: translate(-50%);
+  color: var(--accent-color);
+}
+/* navigation bar */
 
 .nav_bar {
   position: fixed;
@@ -68,6 +102,7 @@
   cursor: pointer;
   display: none;
 }
+
 /* home section style */
 .home {
   display: flex;
@@ -113,50 +148,23 @@
 }
 
 /* about section */
-section {
-  padding: 100px 0;
-}
-.about {
+
+.about,
+.services {
   font-family: "Inter", sans-serif;
 }
-.about .title {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
-  font-family: "Ubuntu", sans-serif;
-}
-.about .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 280px;
-  height: 3px;
-  background: #111;
-  transform: translateX(-50%);
-}
+
 .about .title::after {
   content: "who i am";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  padding: 5px;
-  font-size: 20px;
-  background: #fff;
-  transform: translate(-50%);
-  color: var(--accent-color);
 }
-
 .about .about_content .left img {
   width: 400px;
   height: 400px;
   object-fit: cover;
   border-radius: 6px;
 }
-.about .about_content {
+.about .about_content,
+.services .service_content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -193,12 +201,58 @@ section {
   color: var(--accent-color);
   background: none;
 }
+
+/* service */
+.services {
+  background: #111;
+  color: #fff;
+}
+.services .title::before {
+  background: #fff;
+}
+.services .title::after {
+  background: #111;
+  content: "what i provide";
+}
+.services .service_content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.4 ease;
+}
+.services .service_content .card i {
+  font-size: 50px;
+  color: var(--accent-color);
+}
+.services .service_content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.services .service_content .card .box {
+  transition: all 0.4 ease;
+}
+.services .service_content .card:hover .box {
+  transform: scale(1.05);
+}
+.services .service_content .card:hover {
+  background: var(--accent-color);
+}
+.services .service_content .card:hover i {
+  color: #fff;
+}
+/* skills*/
+
 /* responsive media */
 
 @media (max-width: 947px) {
   .container {
     padding: 0 23px;
   }
+  /* navigation */
   .nav_bar.sticky .menu_btn:hover {
     color: rgb(34, 145, 165);
   }
@@ -236,6 +290,8 @@ section {
     margin: 20px;
     font-size: 25px;
   }
+  /* home */
+
   .home {
     background-size: auto;
   }
@@ -248,6 +304,7 @@ section {
   .home .home_content .introduction_about {
     font-size: 30px;
   }
+  /* about */
   .about .about_content .column {
     width: 100%;
   }
@@ -258,5 +315,9 @@ section {
   }
   .about .about_content .right {
     flex: 100%;
+  }
+  .services .service_content .card {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
