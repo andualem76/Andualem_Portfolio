@@ -17,6 +17,20 @@
 section {
   padding: 100px 0;
 }
+.about,
+.services,
+.skills,
+footer {
+  font-family: "Inter", sans-serif;
+}
+.about .about_content,
+.services .service_content,
+.skills .skills_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 section .title {
   position: relative;
   text-align: center;
@@ -149,11 +163,6 @@ section .title::after {
 
 /* about section */
 
-.about,
-.services {
-  font-family: "Inter", sans-serif;
-}
-
 .about .title::after {
   content: "who i am";
 }
@@ -161,15 +170,9 @@ section .title::after {
   width: 400px;
   height: 400px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 12px;
 }
-.about .about_content,
-.services .service_content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .about .about_content .right {
   width: 55%;
 }
@@ -245,6 +248,77 @@ section .title::after {
   color: #fff;
 }
 /* skills*/
+.skills .title::after {
+  content: "what i know";
+}
+.skills .skills_content .column {
+  width: calc(50% - 30px);
+}
+.skills .skills_content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills_content .left p {
+  text-align: justify;
+}
+.skills .skills_content .right .bars {
+  margin-bottom: 15px;
+}
+.skills .skills_content .right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills_content .right span {
+  font-weight: 500;
+  font-size: 16px;
+}
+.skills .skills_content .right .line {
+  height: 5px;
+  width: 100%;
+  background: lightgray;
+  position: relative;
+}
+.skills .skills_content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  background: var(--accent-color);
+}
+.skills_content .right .html::before {
+  width: 80%;
+}
+.skills_content .right .css::before {
+  width: 70%;
+}
+.skills_content .right .js::before {
+  width: 50%;
+}
+.skills_content .right .php::before {
+  width: 40%;
+}
+.skills_content .right .mysql::before {
+  width: 80%;
+}
+/* footer */
+footer {
+  background: #111;
+  padding: 20px 25px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+footer span a {
+  color: var(--accent-color);
+}
+footer span a:hover {
+  text-decoration: underline;
+}
 
 /* responsive media */
 
@@ -319,5 +393,11 @@ section .title::after {
   .services .service_content .card {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .skills .skills_content .column {
+    width: 100%;
+  }
+  .skills .skills_content .left {
+    margin-bottom: 30px;
   }
 }
