@@ -20,12 +20,14 @@ section {
 .about,
 .services,
 .skills,
+.contact,
 footer {
   font-family: "Inter", sans-serif;
 }
 .about .about_content,
 .services .service_content,
-.skills .skills_content {
+.skills .skills_content,
+.contact_content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -48,7 +50,7 @@ section .title::before {
   width: 280px;
   height: 3px;
   background: #111;
-  transform: translateX(-50%);
+  transform: translate(-50%);
 }
 section .title::after {
   position: absolute;
@@ -210,6 +212,9 @@ section .title::after {
   background: #111;
   color: #fff;
 }
+.services .service_content {
+  margin-top: 150px;
+}
 .services .title::before {
   background: #fff;
 }
@@ -223,8 +228,12 @@ section .title::after {
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
+  height: 300px;
   cursor: pointer;
-  transition: all 0.4 ease;
+  transition: all 0.6 ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .services .service_content .card i {
   font-size: 50px;
@@ -235,10 +244,8 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
-.services .service_content .card .box {
-  transition: all 0.4 ease;
-}
-.services .service_content .card:hover .box {
+
+.services .service_content .card:hover {
   transform: scale(1.05);
 }
 .services .service_content .card:hover {
@@ -285,7 +292,6 @@ section .title::after {
   content: "";
   position: absolute;
   height: 100%;
-
   left: 0;
   top: 0;
   background: var(--accent-color);
@@ -318,6 +324,97 @@ footer span a {
 }
 footer span a:hover {
   text-decoration: underline;
+}
+/* contact */
+.contact .title::after {
+  content: "where to find";
+}
+.contact .contact_content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact_content .left p {
+  text-align: justify;
+}
+.contact .contact_content .text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact .contact_content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact_content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact_content .row .info {
+  margin-left: 30px;
+}
+.contact .contact_content .row i {
+  font-size: 25px;
+  color: var(--accent-color);
+}
+.contact .contact_content .info .head {
+  font-weight: 500;
+}
+.contact .contact_content .info .sub_title {
+  color: #333;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .email {
+  margin-left: 10px;
+}
+.contact .right form .textarea {
+  height: 100px;
+  width: 640px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button {
+  height: 47px;
+  width: 170px;
+}
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--accent-color);
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+  color: var(--accent-color);
+  background: none;
 }
 
 /* responsive media */
@@ -399,5 +496,13 @@ footer span a:hover {
   }
   .skills .skills_content .left {
     margin-bottom: 30px;
+  }
+  .contact .contact_content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .contact .right form .textarea {
+    height: 100px;
+    width: 467px;
   }
 }

@@ -11,4 +11,9 @@ $('.menu_btn').click(function(){
     $('.nav_bar .menu').toggleClass("active")
     $('.menu_btn i').toggleClass("active")
 });
+$('.dismiss').click(function(){
+    $('.nav_bar .menu').toggleClass("active")
+    $('.menu_btn i').toggleClass("active")
+});
+
 });
