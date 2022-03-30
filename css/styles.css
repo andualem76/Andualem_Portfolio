@@ -424,6 +424,10 @@ footer span a:hover {
     padding: 0 23px;
   }
   /* navigation */
+  .menu_icon {
+    width: 20px;
+    height: 20px;
+  }
   .nav_bar.sticky .menu_btn:hover {
     color: rgb(34, 145, 165);
   }

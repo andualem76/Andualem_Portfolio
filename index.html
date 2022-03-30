@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio Website</title>
+    <link rel="icon" class="fas fa-user" type="image/x-icon" />
+
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="https://kit.fontawesome.com/28921f4de5.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- <script src="https://kit.fontawesome.com/28921f4de5.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   </head>
   <body>
-    <nav class="nav_bar">
+    <nav class="nav_bar" id="navv">
       <div class="container">
         <div class="logo">
           <a href="/index.html">Portfo<span>lio.</span></a>
         </div>
-        <ul class="menu">
+        <ul class="menu" id="myDIV">
           <li><a class="dismiss" href="">Home</a></li>
           <li><a class="dismiss" href="#about">About</a></li>
           <li><a class="dismiss" href="#services">Services</a></li>
@@ -24,7 +27,8 @@
           <li><a class="dismiss" href="#contact">Contact</a></li>
         </ul>
         <div class="menu_btn">
-          <i class="fas fa-bars"></i>
+          <img class="menu_icon" src="/images/index.png" alt="menu" />
+          <!-- <i class="fas fa-bars"></i> -->
         </div>
       </div>
     </nav>
@@ -211,23 +215,34 @@
 
           <div class="column right">
             <div class="text">Message me</div>
-            <form action="#">
+            <form action="http://localhost/Protfolio/api.php" method="post">
               <div class="fields">
                 <div class="field name">
-                  <input type="text" placeholder="Name" required />
+                  <input type="text" placeholder="Name" name="name" required />
                 </div>
                 <div class="field email">
-                  <input type="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    required
+                  />
                 </div>
               </div>
               <div class="field">
-                <input type="text" placeholder="Subject" required />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  name="subject"
+                  required
+                />
               </div>
               <div class="field textarea">
                 <textarea
                   cols="30"
                   rows="10"
                   placeholder="Describe project.."
+                  name="project"
                   required
                 ></textarea>
               </div>
