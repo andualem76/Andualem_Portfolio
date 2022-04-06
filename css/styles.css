@@ -17,6 +17,12 @@
 section {
   padding: 100px 0;
 }
+.skills{
+  padding-bottom: 50px;
+}
+.contact{
+  padding-top: 0;
+}
 .about,
 .services,
 .skills,
@@ -38,8 +44,7 @@ section .title {
   text-align: start;
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 40px;
   font-family: 'Fredoka One', cursive;
 }
 
@@ -52,7 +57,6 @@ section .title {
   z-index: 999;
   width: 100%;
   padding: 30px 0;
-  /* background: var(--background-color); */
   font-family: 'Fredoka One', cursive;
   transition: all 0.3s ease;
 }
@@ -64,7 +68,7 @@ section .title {
   color: #fff;
 }
 .nav_bar.sticky .menu li a:hover {
-  color: rgb(34, 145, 165);
+  color: rgb(0, 0, 0 ,0.5);
 }
 .nav_bar .container {
   display: flex;
@@ -248,62 +252,9 @@ transition: all 0.3s;
 .skills .skills_content .left p {
   text-align: justify;
 }
-.skills .skills_content .right .bars {
-  margin-bottom: 15px;
-}
-.skills .skills_content .right .info {
-  display: flex;
-  margin-bottom: 5px;
-  align-items: center;
-  justify-content: space-between;
-}
-.skills .skills_content .right span {
-  font-weight: 500;
-  font-size: 16px;
-}
-.skills .skills_content .right .line {
-  height: 5px;
-  width: 100%;
-  background: lightgray;
-  position: relative;
-}
-.skills .skills_content .right .line::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: var(--accent-color);
-}
-.skills_content .right .html::before {
-  width: 80%;
-}
-.skills_content .right .css::before {
-  width: 70%;
-}
-.skills_content .right .js::before {
-  width: 50%;
-}
-.skills_content .right .php::before {
-  width: 40%;
-}
-.skills_content .right .mysql::before {
-  width: 80%;
-}
-/* footer */
-footer {
-  background: #111;
-  padding: 20px 25px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-}
-footer span a {
-  color: var(--accent-color);
-}
-footer span a:hover {
-  text-decoration: underline;
-}
+
+
+
 /* contact */
 
 .contact .contact_content .column {
@@ -393,6 +344,25 @@ footer span a:hover {
   color: var(--accent-color);
   background: none;
 }
+/* footer */
+footer {
+  background: #111;
+  padding: 20px 25px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+footer span a {
+  color: var(--accent-color);
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
 
 /* responsive media */
 
@@ -486,4 +456,8 @@ footer span a:hover {
     height: 100px;
     width: 467px;
   }
+  .skills_content > div:nth-child(2) {
+    
+    margin-left: -90px;
+    }
 }

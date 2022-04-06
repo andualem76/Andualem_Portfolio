@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio Website</title>
+    <title>MY Portfolio Site</title>
     <link rel="icon" class="fas fa-user" type="image/x-icon" />
-
-    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-
+    <link rel="icon" href="/images/protfolio1.png" type="image/icon type">
     <script src="https://kit.fontawesome.com/28921f4de5.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   </head>
+
   <body>
     <nav class="nav_bar" id="navv">
       <div class="container">
@@ -27,8 +25,7 @@
           <li><a class="dismiss" href="#contact">Contact</a></li>
         </ul>
         <div class="menu_btn">
-          <img class="menu_icon" src="/images/index.png" alt="menu" />
-          <!-- <i class="fas fa-bars"></i> -->
+          <i class="fas fa-bars"></i>
         </div>
       </div>
     </nav>
@@ -62,9 +59,9 @@
             <p>
               At this time i am attending at adama science and technology
               university studing computer science. i have worked on couple of
-              small projects
+              small projects now to trying expand my experience.
             </p>
-            <a href="">Download CV</a>
+            <a href="/images/cv.jpg" download="cv">Download CV</a>
           </div>
         </div>
       </div>
@@ -78,21 +75,21 @@
           <div class="card">
             <i class="fas fa-paint-brush"></i>
             <div class="text">Web design & development</div>
-            <p>i try to make Websites</p>
+            <p>i can create your website as you want it with all the features that you need as long as it not huge site</p>
           </div>
 
           <div class="card">
-            <i class="fas fa-chart-line"></i>
+            <i class="fa-brands fa-java"></i>
             <div class="text">Software with java</div>
 
-            <p>Lorem ipsum dolor sit</p>
+            <p>I have worked on small software project on java so depending on the project i can make small software</p>
           </div>
 
           <div class="card">
-            <i class="fas fa-code"></i>
+            <i class="fa-solid fa-hammer"></i>
             <div class="text">web maintanace</div>
 
-            <p>Lorem ipsum dolor</p>
+            <p>If you have website and want to change or update something i can maintain your site</p>
           </div>
         </div>
       </div>
@@ -106,8 +103,9 @@
             <div class="text">My creative skills & experince</div>
             <p>
               I have little skills & experince because i am still learning but i
-              have some skills in different technologies including HTMl, css,
-              javascript, php and mysql
+              have some skills in different technologies including HTMl, Css,
+              Javascript, Php and Mysql. i have also some skills in java to create software 
+              but i mainly focus on web.
             </p>
           </div>
           <div class="column right">
@@ -125,7 +123,7 @@
             <div class="text">Get in Touch</div>
             <p>
               You can contact me by inserting your information in the following
-              form describe your subject and project i will responed
+              form describe your subject and project i will responed.
             </p>
             <div class="icons">
               <div class="row">
@@ -195,44 +193,17 @@
         </div>
       </div>
     </section>
+    <!-- footer section -->
     <footer>
       <span
         >Created By <a href="">Andualem</a> 
       
     </footer>
 
-    <script src="/js/main.js"></script>
-
     <script
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
-
-    <script type="text/javascript">
-      // Load google charts
-      google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Draw the chart and set the chart values
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ["Task", "Skills"],
-          ["HTML", 8],
-          ["Css", 6],
-          ["Php", 4],
-          ["JavaScript", 4],
-          ["MySql", 6],
-        ]);
-
-        // Optional; add a title and set the width and height of the chart
-        var options = { width: 650, height: 400 };
-
-        // Display the chart inside the <div> element with id="piechart"
-        var chart = new google.visualization.PieChart(
-          document.getElementById("piechart")
-        );
-        chart.draw(data, options);
-      }
-    </script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
